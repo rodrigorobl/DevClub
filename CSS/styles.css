@@ -1,0 +1,44 @@
+    /*    
+    #titulo {
+        color: rgb(199, 51, 51);
+        background: black;
+    }
+
+    #paragrafo {
+        color: blue;
+        font-size: 20px;
+    }
+
+    #botao {
+        background: green;
+        border-color: darkgreen;
+    }
+
+    #outro-botao {
+        background: rgb(71, 238, 85);
+        border-color: rgb(113, 207, 214);
+    }
+    */
+   
+    .titulo {
+        color: rgb(199, 51, 51);
+        background: black;
+    }
+
+    .paragrafo {
+        color: blue;
+        font-size: 20px;
+    }
+
+    .botao {
+        background: green;
+        border-color: darkgreen;
+    }
+
+    .outro-botao {
+        background: rgb(71, 238, 85);
+        border-color: rgb(113, 207, 214);
+    }
+
+
+    

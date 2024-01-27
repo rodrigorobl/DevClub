@@ -1,0 +1,160 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 44px 0 144px 76px;
+}
+
+.link-header {
+    width: 87px;
+    height: 20px;
+    font-weight: 400;
+    top: 47px;
+    left: 42px;
+    padding: 0px, 4px, 0px, 0px;
+    font-size: 18px;
+    line-height: 29px;
+    cursor: pointer;
+    margin-right: 23px;
+   
+}
+
+.button-header {
+    background: #4CB538;
+    border-radius: 4.5px;
+    width: 130px;
+    height: 41px;
+    border: none;
+    font-size: 18px;
+    line-height: 29px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+.logo-image {
+    width: 568px;
+    height: 500px;
+    margin-left: 125px;
+    display: inline-block;
+}
+
+section {
+    display: inline-block;
+    margin-left: 86px;
+    width: 493px;
+
+}
+
+h1 {
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 82px;
+    letter-spacing: 0.5961538553237915px;
+    text-align: left;
+    color: #161A49;
+}
+
+
+p {
+    height: 99px;
+    font-weight: 400;
+    top: 553px;
+    left: 801px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.link-section {
+    color: #6FBF44;
+    width: 112px;
+    height: 27px;
+    top: 707px;
+    left: 801px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;  
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px){
+
+    .logo-image {
+        position: fixed;
+        width: 348px;
+        height: 359px;
+        top: 510px;
+        margin-left: 34px;
+        
+           
+       
+        
+    }
+
+    h1 {
+        color: #161A49;
+        text-align: center;
+        font-size: 33px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: 0.596px;
+        margin-left: 74px;
+    }
+
+   p {
+        color: #4B505A;
+        text-align: center;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0.5px;
+        /*margin-left: 74px;*/
+        margin: 44px 48px 80px 121px;
+    }
+
+    .link-section {
+        color: #6FBF44;
+        text-align: justify;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 112px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin-left: 216px;
+        
+    }
+
+    .link-header {
+        display: none;
+    }
+
+    section {
+        margin-left: -76px;
+        width: 487px;
+        margin-top: -89px;
+        
+    }
+    .button-header {
+        margin-left: 178px;
+        margin-top: -25px;
+        }
+}
+
+
+
+
+
+
+
+
+
+
