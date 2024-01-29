@@ -9,8 +9,15 @@ Tipos de dados
 Estrutura de Dados
 
 1.Array
+
+
 */
 
+
+
+
+
+/*
 const users = [
     {name: "Rodolfo", age: 30},
     {name: "Aline", age: 27},
@@ -24,7 +31,7 @@ console.log(users[0].age)
 
 
 
-/*
+
 const users = [
     {
         Nome: "Rodolfo",
@@ -52,7 +59,7 @@ console.log(users)
 
 
 /*
-------------------------------------------------------------------------
+
 
 const myAge = 30
 const myCar = 'Audi'
