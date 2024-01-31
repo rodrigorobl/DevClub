@@ -110,6 +110,7 @@ p {
     top: 30%;
     padding: 20px;
     border-radius: 5px;
+    transition: left 1s ease-in-out;
 }
 
 input {
@@ -130,11 +131,13 @@ textarea {
 }
 
 .mascara-formulario {
+    visibility: hidden;
     position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99)85%);
+    transition: visibility 1s ease-in-out;
 }
 
 
@@ -151,5 +154,5 @@ Inicial
 Final
     top: 30%;
     left: 50%;
-    transform: translateX(50%);
+    transform: translateX(-50%);
     */
