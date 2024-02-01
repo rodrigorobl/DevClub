@@ -12,7 +12,31 @@ body {
 
 }
 
+.conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
 
+.caixa-texto {
+    width: 600px;
+}
+
+.caixa-imagem{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 250px;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+
+}
 
 h2 {
     color: #333;
@@ -37,6 +61,7 @@ button {
     border: none;
     cursor: pointer;
     padding: 10px;
+    margin: 20px;
 }
 
 .logo {
@@ -44,16 +69,28 @@ button {
 }
 
 .starbucks {
-    width: 500px;
+    width: 340px;
 }
 
 .botao-menu {
     width: 60px;
     transition: 1s;
     cursor: pointer;
+    margin: 10px;
 }
 
 .botao-menu:hover {
     transform: translateY(-25px);
     
+}
+
+.circulo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    top: 0;
+    left: 0;
+    clip-path: circle(600px at right 800px);
+    z-index: -1;    
 }

@@ -12,28 +12,50 @@
 </head>
 
 <body>
+
+    <div class="circulo"></div>
+
     <img src="./img/logo.png" class="logo">
 
-    <div>
-        <h2>It's not just cofee<br> 
-            It's <span>Starbucks</span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima modi perferendis dolorem autem adipisci
-            fugit, neque quidem sequi a culpa distinctio, vel suscipit natus accusamus dicta repellendus necessitatibus
-            maiores facilis!</p>
-        <button>Learn More</button>
+    <div class="conteudo">
+
+        <div class="caixa-texto">
+            <h2>It's not just cofee<br>
+                It's <span>Starbucks</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima modi perferendis dolorem autem adipisci
+                fugit, neque quidem sequi a culpa distinctio, vel suscipit natus accusamus dicta repellendus
+                necessitatibus
+                maiores facilis!</p>
+            <button>Learn More</button>
+        </div>
+
+
+        <div class="caixa-imagem">
+            <img src="./img/img1.png" class="starbucks">
+        </div>
+
     </div>
 
-
-    <div>
-        <img src="./img/img1.png" class="starbucks">
-    </div>
-
-    <div>
-        <img src="./img/img-pequena1.png" class="botao-menu">
-        <img src="./img/img-pequena2.png" class="botao-menu">
-        <img src="./img/img-pequena3.png" class="botao-menu">
+    <div class="menu">
+        <img src="./img/img-pequena1.png" class="botao-menu" onclick="trocaImagem('./img/img1.png'); trocaCor('#017143')">
+        <img src="./img/img-pequena2.png" class="botao-menu" onclick="trocaImagem('./img/img2.png'); trocaCor('#eb7495')">
+        <img src="./img/img-pequena3.png" class="botao-menu" onclick="trocaImagem('./img/img3.png'); trocaCor('#d752b1')">
     </div>
 
 </body>
+
+<script>
+    let imagem = document.querySelector(".starbucks")
+    let circulo = document.querySelector(".circulo")
+
+    function trocaImagem(endereco){
+        imagem.src = endereco   
+    }
+
+    function trocaCor(cor){
+        circulo.style.background = cor
+    }
+
+</script>
 
 </html>
