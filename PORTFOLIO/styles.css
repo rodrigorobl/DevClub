@@ -53,6 +53,11 @@ li:hover {
 
 }
 
+.link-menu {
+    text-decoration: none;
+    color: white;
+}
+
 .meu-nome {
     position: absolute;
     top: 50%;
