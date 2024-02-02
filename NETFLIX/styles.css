@@ -63,6 +63,14 @@ input {
     cursor: pointer;
 }
 
+#botao-email:hover {
+    opacity: 0.6;
+    transition: 1s;
+
+}
+
+
+
 #formulario {
     display: flex;
     justify-content: center;
@@ -101,6 +109,13 @@ h2 {
 #imagem-pergunta {
     float: right;
     margin-top: 8px;
+    transform: rotate(45deg);
+}
+
+#imagem-pergunta-girar {
+    float: right;
+    margin-top: 8px;
+    transform: rotate(90deg);
 }
 
 #pergunta {
@@ -110,6 +125,7 @@ h2 {
     margin-left: auto;
     margin-top: 3px;
     padding: 24px;
+    display: none;
     
 }
 
