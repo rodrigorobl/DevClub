@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+#container {
+    background: url("./img/background.jpeg");
+}
+
+
+#botao-entrar {
+    background: #e50914;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 18px;
+    padding-left: 18px;
+    border: 0;
+    border-radius: 3px;
+    float: right;
+    cursor: pointer;
+}
+
+#cabecalho {
+    padding: 28px 56px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 56px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 140px;
+}
+
+#paragrafo-assista {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 14px;
+}
+
+#paragrafo-pronto {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+input {
+    width: 500px;
+}
+
+#botao-email {
+    width: 250px;
+}
