@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>JS-DevClub</title>
 </head>
+
 <body>
     <h1>JavaScript</h1>
-    <input id="main-input" placeholder="Digite aqui">
+    <input onkeypress="digiteiNoInput()" id="main-input" placeholder="Digite aqui">
     <p>Começando nossa Jornada para aprender</p>
     <p class="paragraph-js">A linguagem de <b>Programação</b> mais versatil do mundo</p>
-    <button class="main-button">Clique aqui</button>
+    <p class="novo-paragrafo"></p>
+    <button onclick="cliqueiNoBotao()" class="main-button">Clique aqui</button>
+    
 </body>
 <script src="./scripts.js"></script>
+
 </html>
