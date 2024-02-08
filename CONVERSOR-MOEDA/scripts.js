@@ -7,33 +7,35 @@ function convertValues() {
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert") //valor em real
     const currencyValueConverted = document.querySelector(".currency-value") //valor em outras moedas
 
-    
+
     const dolarToday = 5.15
     const euroToday = 5.44
     const libraToday = 6.29
-    const bitcoinToday = 143.716
+    const bitcoinToday = 222800.76
     // valor moeda base real
 
-    const euroParaDolar = 0.94
-    const libraParaDolar = 0.81
-    const bitcoinParaDolar = 27389.90
-    const realParaDolar = 5.06
+    const euroParaDolar = dolarToday / euroToday
+    const libraParaDolar = dolarToday / libraToday
+    const bitcoinParaDolar = dolarToday / bitcoinToday
+    const realParaDolar = dolarToday
     //valor moeda base dolar
 
-    const dolarParaEuro = 1.06
-    const libraParaEuro = 0.86
-    const bitcoinParaEuro = 25.843
+    const dolarParaEuro = euroToday / dolarToday
+    const libraParaEuro = euroToday / libraToday
+    const bitcoinParaEuro = euroToday / bitcoinToday
+    const realParaEuro = euroToday
     //valor moeda base 
 
-    const dolarParaLibra = 1.23
-    const euroParaLibra = 1.16
-    const bitcoinParaLibra = 22.292
+    const dolarParaLibra = libraToday / dolarToday
+    const euroParaLibra = libraToday / euroToday
+    const bitcoinParaLibra = libraToday / bitcoinToday
+    const realParaLibra = libraToday
     //valor moeda base 
 
-    const dolarParaBit = 27.402
-    const euroParaBit = 25.843
-    const libraParaBit = 22.292
-    const realParaBit = 143.716
+    const dolarParaBit = bitcoinToday / dolarToday
+    const euroParaBit = bitcoinToday / euroToday
+    const libraParaBit = bitcoinToday / libraToday
+    const realParaBit = bitcoinToday
     //valor moeda base bitcoin
 
     if (currentSelectConverter.value == "dolar" & currencySelect.value == "real") { //Se o select estiver selecionado o valor de dolar, entre aqui
@@ -148,28 +150,28 @@ function convertValues() {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "BTC"
-        }).format(inputCurrencyValue / realParaBit)
+        }).format(inputCurrencyValue * realParaBit)
     }
 
     if (currentSelectConverter.value == "bitcoin" & currencySelect.value == "dolar") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "BTC"
-        }).format(inputCurrencyValue / bitcoinParaDolar)
+        }).format(inputCurrencyValue * dolarParaBit)
     }
 
     if (currentSelectConverter.value == "bitcoin" & currencySelect.value == "euro") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "BTC"
-        }).format(inputCurrencyValue / bitcoinParaEuro)
+        }).format(inputCurrencyValue * euroParaBit)
     }
 
     if (currentSelectConverter.value == "bitcoin" & currencySelect.value == "libra") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "BTC"
-        }).format(inputCurrencyValue / bitcoinParaLibra)
+        }).format(inputCurrencyValue * libraParaBit)
     }
 
     if (currentSelectConverter.value == "bitcoin" & currencySelect.value == "bitcoin") {
@@ -183,28 +185,28 @@ function convertValues() {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
-        }).format(inputCurrencyValue * dolarToday)
+        }).format(inputCurrencyValue / realParaDolar)
     }
 
     if (currentSelectConverter.value == "real" & currencySelect.value == "euro") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
-        }).format(inputCurrencyValue * euroToday)
+        }).format(inputCurrencyValue / realParaEuro)
     }
 
     if (currentSelectConverter.value == "real" & currencySelect.value == "libra") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
-        }).format(inputCurrencyValue * libraToday)
+        }).format(inputCurrencyValue / realParaLibra)
     }
 
     if (currentSelectConverter.value == "real" & currencySelect.value == "bitcoin") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
-        }).format(inputCurrencyValue * bitcoinToday)
+        }).format(inputCurrencyValue / bitcoinToday)
     }
 
     if (currentSelectConverter.value == "real" & currencySelect.value == "real") {
@@ -214,11 +216,38 @@ function convertValues() {
         }).format(inputCurrencyValue)
     }
 
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(inputCurrencyValue)
 
+    if (currentSelectConverter.value == "real") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue)
+    }
+
+    if (currentSelectConverter.value == "dolar") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue)
+    }
+    if (currentSelectConverter.value == "euro") {
+        currencyValueToConvert.innerHTML = new Intl.NumbrFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue)
+    }
+    if (currentSelectConverter.value == "libra") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-UK", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue)
+    }
+    if (currentSelectConverter.value == "bitcoin") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue)
+    }
 }
 
 
