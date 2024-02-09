@@ -1,4 +1,4 @@
-/*const element = document.querySelector(".paragraph-js")
+const element = document.querySelector(".paragraph-js")
 
 
 element.textContent = "Texto novo <b>Ola</b>"
@@ -27,10 +27,10 @@ function cliqueiNoBotao(){
 
 function digiteiNoInput(){
     console.log("Digitei no input")
-}*/
+}
 
 
-const input = document.querySelector("#main-input")
+/*const input = document.querySelector("#main-input")
 const select = document.querySelector("select")
 const button = document.querySelector(".main-button")
 
@@ -44,4 +44,4 @@ button.addEventListener("click", troqueiValor)
 button.addEventListener("click", function(event){
     console.log(event)
 })
-
+*/

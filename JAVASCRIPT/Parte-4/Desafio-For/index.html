@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input placeholder="Digite o nome do contato">
+    <p></p>
+    <button onclick="search()">Procurar Contato</button>
+
+
+</body>
+<script>
+    let p = document.querySelector('p')
+    let input = document.querySelector('input')
+
+    let contacts = [
+        { name: 'Rodolfo', number: '(19) 94343-3434' },
+        { name: 'Paulo', number: '(19) 94343-3434' },
+        { name: 'Aline', number: '(19) 94343-3434' },
+        { name: 'Maria', number: '(19) 94343-3434' },
+    ]
+
+    function search() {
+
+        for (let i = 0; i < contacts.length; i++) {
+
+            if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
+                p.innerHTML = `Contato Encontrado Nome:${contacts[i].name} Tel: ${contacts[i].number}` //template literal
+                //p.innerHTML = "Contato Encontrado Nome:" + contacts[i].name + "Tel:" + contacts[i].number // outra alternativa
+
+                break
+            } else {
+                p.innerHTML = "Contato nao encontrado, tente novamente."
+            }
+
+        }
+    }
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+    <body>
+    <input type="text" id="nomeContato" placeholder="Digite o nome do contato">
+    <p id="resultado"></p>
+    <button onclick="buscarContato()">Procurar Contato</button>
+    </body>
+
+    // Função para buscar um contato pelo nome
+    function buscarContato() {
+        let nomeBusca = document.getElementById('nomeContato').value;
+        let contatoEncontrado = null;
+
+        for (let contato of contacts) {
+            if (contato.name.toLowerCase() === nomeBusca.toLowerCase()) {
+                contatoEncontrado = contato;
+                break;
+            }
+        }
+
+        if (contatoEncontrado) {
+            document.getElementById("resultado").innerText = `Contato encontrado - Nome: ${contatoEncontrado.name}, Telefone: ${contatoEncontrado.number}`;
+        } else {
+            document.getElementById("resultado").innerText = `Contato com o nome '${nomeBusca}' não encontrado.`;
+        }
+    }
+    -->
