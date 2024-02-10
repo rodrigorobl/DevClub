@@ -26,32 +26,63 @@
     ]
 
     function search() {
-        
-        for (let contatos of contacts) {
-            
-            //for (let i = 0; i < contacts.length; i++) {
 
-            if (input.value.toLowerCase() === contatos.name.toLowerCase()) {
-                p.innerHTML = `Contato Encontrado Nome:${contatos.name} Tel: ${contatos.number}` //template literal
-                //p.innerHTML = "Contato Encontrado Nome:" + contacts[i].name + "Tel:" + contacts[i].number // outra alternativa
+let i = -1
 
-                break
-            } else {
-                p.innerHTML = "Contato nao encontrado, tente novamente."
-            }
+do {
 
-        }
+    i++
+
+//for (let contatos of contacts) {
+    
+    //for (let i = 0; i < contacts.length; i++) {
+
+    if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
+       // p.innerHTML = `Contato Encontrado Nome:${contatos.name} Tel: ${contatos.number}` //template literal
+        p.innerHTML = "Contato Encontrado Nome:" + contacts[i].name + "Tel:" + contacts[i].number // outra alternativa
+
+        break
+    } else {
+        p.innerHTML = "Contato nao encontrado, tente novamente."
     }
+
+}while (i < contacts.length);
+}
+
+
 
 </script>
 
 </html>
 
 
+<!--
+    ------------------------------------------------------------------------------------
+function search() {
 
+    let i = -1
 
+    while (i < contacts.length) {
 
+        i++
+    
+    //for (let contatos of contacts) {
+        
+        //for (let i = 0; i < contacts.length; i++) {
 
+        if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
+           // p.innerHTML = `Contato Encontrado Nome:${contatos.name} Tel: ${contatos.number}` //template literal
+            p.innerHTML = "Contato Encontrado Nome:" + contacts[i].name + "Tel:" + contacts[i].number // outra alternativa
+
+            break
+        } else {
+            p.innerHTML = "Contato nao encontrado, tente novamente."
+        }
+
+    }
+}
+
+-->
 
 
 
@@ -61,6 +92,7 @@
 
 
 <!--
+    ---------------------------------------------------------------------------------------------
     <body>
     <input type="text" id="nomeContato" placeholder="Digite o nome do contato">
     <p id="resultado"></p>
