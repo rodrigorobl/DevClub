@@ -26,11 +26,13 @@
     ]
 
     function search() {
+        
+        for (let contatos of contacts) {
+            
+            //for (let i = 0; i < contacts.length; i++) {
 
-        for (let i = 0; i < contacts.length; i++) {
-
-            if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
-                p.innerHTML = `Contato Encontrado Nome:${contacts[i].name} Tel: ${contacts[i].number}` //template literal
+            if (input.value.toLowerCase() === contatos.name.toLowerCase()) {
+                p.innerHTML = `Contato Encontrado Nome:${contatos.name} Tel: ${contatos.number}` //template literal
                 //p.innerHTML = "Contato Encontrado Nome:" + contacts[i].name + "Tel:" + contacts[i].number // outra alternativa
 
                 break
