@@ -4,7 +4,7 @@
 */
 
 
-function sayMyName(name)
+function sayMyName(name){
     console.log(name)
-
+}
 sayMyName("Rodrigo")
