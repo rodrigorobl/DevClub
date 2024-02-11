@@ -14,8 +14,9 @@ function sub(value = myNumber, value2 = myNumber){
 }
 
 function sum(value = myNumber, value2 = myNumber){
-    total2 = value + value
-    console.log(`O valor sun e ${total2}.`)
+    total2 = value + value2
+    return total2
+    //console.log(`O valor sun e ${total2}.`)
     
 }
 
@@ -30,7 +31,8 @@ function div(value = myNumber, value2 = myNumber){
     console.log(`O valor div e ${total4}.`)
     
 }
-sum(10, 30) 
+const somatorio = sum(10, 30) 
+    console.log(somatorio + " Resultado")
 sub(30, 20)
 mult(10, 10)
 div(10,5)
