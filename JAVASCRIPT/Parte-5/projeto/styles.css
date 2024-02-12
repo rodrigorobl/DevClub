@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    right: 100px;
+    padding: 100px;
+    border-radius: 10px;
+    background: white;
+    
+    
+}
+
+.button {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    gap: 10px;
+    height: 33px 
+    
+}
+
+.pontuacao{
+    margin-bottom: 15px;
+}
+
+.alexa{
+
+}
