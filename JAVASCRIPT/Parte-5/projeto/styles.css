@@ -68,3 +68,7 @@ p {
 .machine-score span {
     color: rgb(224, 71, 15);
 }
+
+.draw-score span {
+    color: rgb(128, 126, 0);
+}

@@ -1,15 +1,62 @@
+
+
+const GAME_OPTIONS = {
+    ROCK: 'rock',
+    PAPER: 'paper',
+    SCISSORS: 'scissors'
+}
+
+
+
+const playHuman = (humanChoice) => {
+    playTheGame(humanChoice, playMachine())
+}
+
+
+
+const playMachine = () => {
+    const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS]
+    const randonNumber = Math.floor(Math.random()) * 3
+    return choices[randonNumber]
+}
+
+const playTheGame = (human, machine) => {
+    console.log('Humano: ' + human + ' Machine: ' + machine)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const result = document.querySelector('.result')
 const humanScore = document.querySelector('#human-score')
 const machineScore = document.querySelector('#machine-score')
+const drawScore = document.querySelector('#draw-score')
 
 let humanScoreNumber = 0
 let machineScoreNumber = 0
+let drawScoreNumber = 0
 
 /*
 humanScoreNumber = Camel Case
 GAME_OPTIONS = Snake Case
 */
 //ENUNS
+/*
 const GAME_OPTIONS = {
     ROCK: 'rock',
     PAPER: 'paper',
@@ -30,9 +77,12 @@ const playMachine = () => {
 }
 
 const playTheGame = (human, machine) => {
-    console.log('Humano: ' + human + ' Machine: ' + machine)
+    //console.log('Humano: ' + human + ' Machine: ' + machine)
 
     if (human === machine) {
+
+        drawScoreNumber++
+        drawScore.innerHTML = drawScoreNumber
         result.innerHTML = "Deu empate"
     } else if (
         (human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.ROCK) ||
@@ -51,4 +101,4 @@ const playTheGame = (human, machine) => {
     }
 
 }
-
+*/
