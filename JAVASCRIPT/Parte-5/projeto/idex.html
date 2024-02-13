@@ -12,13 +12,14 @@
     
     <div class="container">
         <h1>Jokênpo</h1>
-        <div class="button">
-            <button>&#x1F44A</button>
-            <button>&#x270B</button>
-            <button>&#x270C</button>
+        <div class="buttons">
+            <button id="rock" onclick="playHuman('rock')">&#x1F44A</button>
+            <button id="paper" onclick="playHuman('paper')">&#x1f590</button>
+            <button id="scissors" onclick="playHuman('scissors')">&#x270C</button>
         </div>
-        <p class="pontuacao">Sua pontuacao: <span>0</span></p>
-        <p class="alexa">Pontuacao da Alexa: <span>0</span></p>
+        <p class="result"></p>
+        <p class="your-score">Sua pontuacao: <span id="human-score">0</span></p>
+        <p class="machine-score">Pontuacao da Alexa: <span id="machine-score">0</span></p>
     </div>
 </body>
 <script src="./scripts.js"></script>
