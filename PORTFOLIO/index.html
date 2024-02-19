@@ -12,6 +12,9 @@
 </head>
 
 <body>
+
+    <div class="mascara-formulario" onclick="esconderForm()"></div>
+
     <div class="caixa-principal" id="home">
         <nav>
             <h2 class="Portfolio">Portfo<span>lio</span></h2>
@@ -29,12 +32,12 @@
     </div>
 
     <section id="sobre">
-        <img src="./img/rodolfo.png">
+        <img src="./img/fotoro.png">
         <div>
             <h2>Sobre mim</h2>
             <p>Eu sou um programador Front End, tenho experiência e conhecimento criando aplicações com HTML, CSS,
                 JavaScript, React e Node.</p>
-            <button>Entre em contato</button>
+            <button onclick="mostrarForm()">Entre em contato</button>
         </div>
     </section>
 
@@ -75,17 +78,29 @@
         </div>
 
     </div>
-   
+
     <footer id="fale-comigo">
         <h5>Rodrigo Robl</h5>
         <p>Para mais informações</p>
 
         <div class="social">
-            <a href="https://www.linkedin.com/in/rodrigoaugusto-developer/" target="_blank"><img src="./img/linkedin.png" </a>
-            <a href="https://api.whatsapp.com/send?phone=5562999972107" target="_blank"><img src="./img/telefone.png" </a>
+            <a href="https://www.linkedin.com/in/rodrigoaugusto-developer/" target="_blank"><img
+                    src="./img/linkedin.png"> </a>
+            <a href="https://api.whatsapp.com/send?phone=5562999972107" target="_blank"><img src="./img/telefone.png">
+            </a>
         </div>
 
+        <form class="formulario-fale-conosco" 
+            action="https://formcarry.com/s/4dwcmws5VUl" method="POST"
+            enctype="multipart/form-data">
+            <input placeholder="Seu nome" type="text" name="nome">
+            <input placeholder="Seu telefone" type="tel" name="telefone">
+            <textarea placeholder="Digite seu problema aqui..." name="duvida"></textarea>
+            <button type="submit">Pedir Orçamento</button>
+        </form>
     </footer>
+
 </body>
+<script src="./scripts.js"></script>
 
 </html>
