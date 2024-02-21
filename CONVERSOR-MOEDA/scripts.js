@@ -2,16 +2,19 @@ const convertButton = document.querySelector(".convert-button")
 const currencySelect = document.querySelector(".currency-select")
 const currentSelectConverter = document.querySelector(".current-select-converter")
 
-function convertValues() {
+const convertValues = async () => {
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert") //valor em real
     const currencyValueConverted = document.querySelector(".currency-value") //valor em outras moedas
 
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL").then(response => response.json())
 
-    const dolarToday = 5.15
-    const euroToday = 5.44
-    const libraToday = 6.29
-    const bitcoinToday = 222800.76
+    console.log(data)
+
+    const dolarToday = data.USDBRL.high
+    const euroToday = data.EURBRL.high
+    const libraToday = data.GBPBRL.high
+    const bitcoinToday = data.BTCBRL.high
     // valor moeda base real
 
     const euroParaDolar = dolarToday / euroToday
@@ -42,7 +45,7 @@ function convertValues() {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
-        }).format(inputCurrencyValue / realParaDolar)
+        }).format(inputCurrencyValue * realParaDolar)
 
     }
 
@@ -80,7 +83,7 @@ function convertValues() {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
-        }).format(inputCurrencyValue / euroToday)
+        }).format(inputCurrencyValue * euroToday)
     }
 
     if (currentSelectConverter.value == "euro" & currencySelect.value == "dolar") {
@@ -115,7 +118,7 @@ function convertValues() {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-UK", {
             style: "currency",
             currency: "GBP"
-        }).format(inputCurrencyValue / libraToday)
+        }).format(inputCurrencyValue * libraToday)
     }
 
     if (currentSelectConverter.value == "libra" & currencySelect.value == "dolar") {
