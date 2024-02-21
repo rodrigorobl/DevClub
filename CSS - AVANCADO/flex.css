@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Aplicados em container
+Display flex
+Flex Direction
+Flex Wrap
+Flex Flow
+Justify Content
+Align Items
+Align Content
+Gap
+*/
+.container{
+    margin: 10px;
+    border: 1px solid #9758a6;
+    display: flex;
+    height: 700px;
+    justify-content: space-between;
+    
+}
+
+/*
+MAIN AXIS - Eixo principal
+CROSS AXIS - Eixo secundario
+*/
+
+/* Aplicado dentro do container
+Flex Basis
+Flex Grow
+Flex Shrink
+Flex
+Order
+Align Self
+*/
+.block{
+    
+    background: #cdd728;
+    border: 5px solid #9758a6;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    height: 100px;
+    flex-grow: 1;
+    
+    
+}
+
