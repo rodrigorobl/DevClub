@@ -10,6 +10,26 @@ body {
     background-color: #8a51fc;
 }
 
+.container {
+    width: 375px;
+    background-color: #f4f4f4;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+header {
+    background-color: #772fd3;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #f4f4f4
+}
+
 .logo {
     width: 300px;
     display: block;
@@ -29,7 +49,8 @@ label {
     font-size: 14px;
 }
 
-select, input {
+select,
+input {
     background: #ffffff;
     border: 1px solid #bbbbbb;
     border-radius: 4px;
@@ -66,12 +87,11 @@ button:active {
 
 section {
     border: 1px solid #772fd3;
-    border-radius: 20px;
-    margin-top: 36px;
-    padding: 12px;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
 }
 
 .arrow-img {
@@ -79,6 +99,7 @@ section {
 }
 
 .currency-box {
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +111,8 @@ section {
     font-size: 14px;
 }
 
-.currency-value, .currency-value-to-convert {
+.currency-value,
+.currency-value-to-convert {
     color: #555555;
     font-weight: 700;
     font-size: 20px;
